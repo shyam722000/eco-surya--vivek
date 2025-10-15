@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EcoSurya Energies - Customer Reviews</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Customer reviews and testimonials for EcoSurya Energies"
+      name="keywords"
+    />
+    <meta
+      content="See what our happy customers say about our solar solutions"
+      name="description"
+    />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Scroll animations
+      function animateOnScroll() {
+        const elements = document.querySelectorAll(".fade-in");
+        elements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 150;
+
+          if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", animateOnScroll);
+      window.addEventListener("load", animateOnScroll);
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+        } else {
+          navbar.style.background = "rgba(255, 255, 255, 0.95)";
+        }
+      });
+
+      // Video click handlers
+      document.querySelectorAll('.video-card').forEach(card => {
+        card.addEventListener('click', function() {
+          const videoId = this.querySelector('img').src.match(/vi\/([^\/]+)\//)[1];
+          window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+        });
+      });
+    </script>
+  </body>
+</html> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #22c55e;
+        --secondary: #059669;
+        --dark: #1f2937;
+        --light: #f8fafc;
+        --accent: #fbbf24;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #374151;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .navbar-brand {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--primary) !important;
+        text-decoration: none;
+      }
+
+      .nav-link {
+        color: var(--dark) !important;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary) !important;
+        transform: translateY(-2px);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 80%;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        min-height: 40vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #003366 0%, #004080 100%);
+        padding-top: 80px;
+        padding-bottom: 40px;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        z-index: 2;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        animation: slideInLeft 1s ease;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 1rem;
+        animation: slideInLeft 1s ease 0.3s both;
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* Sections */
+      .review-section {
+        padding: 80px 0;
+        background: #f8fafc;
+      }
+
+      .video-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        color: var(--dark);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+        color: #6b7280;
+        text-align: center;
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Review Card */
+      .review-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        height: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        border: 1px solid #e5e7eb;
+      }
+
+      .review-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .customer-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .customer-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #22c55e 0%, #059669 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .customer-info h5 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--dark);
+      }
+
+      .customer-info .location {
+        color: #6b7280;
+        font-size: 0.9rem;
+      }
+
+      .stars {
+        color: #fbbf24;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .review-text {
+        color: #4b5563;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+
+      /* Video Card */
+      .video-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        border: 1px solid #e5e7eb;
+        height: 100%;
+      }
+
+      .video-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .video-thumbnail {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+        background: #000;
+        cursor: pointer;
+      }
+
+      .video-thumbnail img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .video-card:hover .video-thumbnail img {
+        transform: scale(1.05);
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .play-button i {
+        color: #dc2626;
+        font-size: 2rem;
+        margin-left: 4px;
+      }
+
+      .video-card:hover .play-button {
+        transform: translate(-50%, -50%) scale(1.1);
+        background: white;
+      }
+
+      .video-info {
+        padding: 1.5rem;
+      }
+
+      .video-title {
+        font-size: 1.1rem;
+        color: var(--dark);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .video-description {
+        color: #6b7280;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      /* Animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .review-card, .video-card {
+          margin-bottom: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top shadow py-2">
+      <a href="./index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+        <img src="./img/logo.png" alt="EcoSurya Logo" class="img-fluid" style="height: 50px; object-fit: contain" />
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="./index.html" class="nav-item nav-link">Home</a>
+          <a href="./about.html" class="nav-link">About</a>
+          <a href="./service.html" class="nav-item nav-link">Services</a>
+          <a href="./products.html" class="nav-item nav-link">Products</a>
+          <a href="./contact.html" class="nav-item nav-link">Contact</a>
+          <a href="#" class="nav-item nav-link active">Reviews</a>
+        </div>
+        <a href="#" class="btn rounded-0 py-3 px-4 d-none d-lg-flex align-items-center gap-3" style="background-color: black; color: white">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 text-center">
+            <div class="hero-content">
+              <h1 class="hero-title">Customer Reviews & Success Stories</h1>
+              <p class="hero-subtitle">
+                Hear from our satisfied customers and watch their solar journey unfold
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Happy Customers Section -->
+    <section class="review-section">
+      <div class="container">
+        <h2 class="section-title">Happy Customers</h2>
+        <p class="section-subtitle">
+          Real feedback from real people who chose EcoSurya Energies for their solar needs
+        </p>
+
+       <div class="row g-4">
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Residential Solar Panel Installation</h4>
+                <p class="video-description">Complete rooftop solar installation for a 5kW residential system in Bengaluru</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Agricultural Solar Pump Setup</h4>
+                <p class="video-description">Installing a 7.5HP solar water pump for farm irrigation in rural Karnataka</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Commercial Building Solar System</h4>
+                <p class="video-description">Large-scale 50kW commercial solar installation project walkthrough</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Solar Panel Maintenance Guide</h4>
+                <p class="video-description">Professional cleaning and maintenance service for optimal panel performance</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Off-Grid Solar System Installation</h4>
+                <p class="video-description">Complete off-grid solar solution with battery backup for remote location</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Solar Inverter Installation</h4>
+                <p class="video-description">Expert installation of hybrid solar inverter system with monitoring</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Videos Section -->
+    <section class="video-section">
+      <div class="container">
+        <h2 class="section-title">Installation Videos</h2>
+        <p class="section-subtitle">
+          Watch our expert team in action installing solar solutions across Karnataka
+        </p>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Residential Solar Panel Installation</h4>
+                <p class="video-description">Complete rooftop solar installation for a 5kW residential system in Bengaluru</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Agricultural Solar Pump Setup</h4>
+                <p class="video-description">Installing a 7.5HP solar water pump for farm irrigation in rural Karnataka</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Commercial Building Solar System</h4>
+                <p class="video-description">Large-scale 50kW commercial solar installation project walkthrough</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Solar Panel Maintenance Guide</h4>
+                <p class="video-description">Professional cleaning and maintenance service for optimal panel performance</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Off-Grid Solar System Installation</h4>
+                <p class="video-description">Complete off-grid solar solution with battery backup for remote location</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Solar Installation Video">
+                <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">Solar Inverter Installation</h4>
+                <p class="video-description">Expert installation of hybrid solar inverter system with monitoring</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row py-4">
+          <div class="col-lg-4 mb-4">
+            <h4 class="mb-4 text-light" style="font-weight: 600; letter-spacing: 0.5px">
+              <i class="fas fa-solar-panel me-2" style="color: #ffc107"></i>
+              EcoSurya Energies
+            </h4>
+            <p class="mb-4" style="line-height: 1.8; font-size: 0.95rem; color: #b8b8b8">
+              Leading the renewable energy revolution with innovative solar solutions for a sustainable future.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-light" style="width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-light" style="width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-light" style="width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="text-light" style="width: 40px; height: 40px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5 class="mb-4 text-light" style="font-weight: 600; letter-spacing: 0.5px">Quick Links</h5>
+            <ul class="list-unstyled" style="line-height: 2.2">
+              <li><a href="./index.html" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Home</a></li>
+              <li><a href="#" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">About Us</a></li>
+              <li><a href="./service.html" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Services</a></li>
+              <li><a href="./products.html" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Projects</a></li>
+              <li><a href="./contact.html" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 mb-4">
+            <h5 class="mb-4 text-light" style="font-weight: 600; letter-spacing: 0.5px">Services</h5>
+            <ul class="list-unstyled" style="line-height: 2.2">
+              <li><a href="#" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Residential Solar</a></li>
+              <li><a href="#" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Commercial Solar</a></li>
+              <li><a href="#" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Solar Panels</a></li>
+              <li><a href="#" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Maintenance</a></li>
+              <li><a href="#" class="text-decoration-none" style="color: #b8b8b8; transition: all 0.3s">Consultation</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h5 class="mb-4 text-light" style="font-weight: 600; letter-spacing: 0.5px">Contact Info</h5>
+            <div style="line-height: 2.2; color: #b8b8b8">
+              <p class="mb-3">
+                <i class="fas fa-map-marker-alt me-3" style="width: 20px"></i>
+                123 Green Energy Street,<br />
+                <span style="margin-left: 38px">Solar City</span>
+              </p>
+              <p class="mb-3">
+                <i class="fas fa-phone me-3" style="width: 20px"></i>
+                +91 12345 67890
+              </p>
+              <p class="mb-3">
+                <i class="fas fa-envelope me-3" style="width: 20px"></i>
+                info@ecosurya.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr style="border-color: rgba(255, 255, 255, 0.1); margin: 2rem 0" />
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0" style="font-size: 0.9rem; color: #b8b8b8">
+              &copy; 2024 EcoSurya Energies. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-decoration-none me-4" style="font-size: 0.9rem; color: #b8b8b8; transition: all 0.3s">Privacy Policy</a>
+            <a href="#" class="text-decoration-none" style="font-size: 0.9rem; color: #b8b8b8; transition: all 0.3s">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      footer a:hover {
+        color: #ffc107 !important;
+      }
+
+      footer .d-flex a:hover {
+        border-color: #ffc107 !important;
+        background-color: rgba(255, 193, 7, 0.1);
+      }
+    </style>
+
+    <!-- Bootstrap
