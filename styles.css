@@ -258,6 +258,7 @@ footer {
     opacity: 0.3;
 }
 
+
 .cta-content {
     position: relative;
     z-index: 2;
@@ -813,4 +814,17 @@ html {
 
 .navbar-nav .nav-link.active {
     color: var(--primary) !important;
+}
+
+.icon-circle i {
+  font-size: 3rem;
+  border-radius: 50% !important;
+  color: #059669;
+}
+
+/* Make it smaller on mobile screens */
+@media (max-width: 768px) {
+  .icon-circle i {
+    font-size: 2rem; /* or 1.8rem depending on design */
+  }
 }

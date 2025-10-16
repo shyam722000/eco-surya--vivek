@@ -218,32 +218,60 @@
             margin-right: auto;
         }
 
-        /* Filter Buttons */
-        .filter-buttons {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+/* Filter Buttons Container */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
-        .filter-btn {
-            background: white;
-            border: 2px solid #e5e7eb;
-            color: #6b7280;
-            padding: 12px 30px;
-            margin: 0 8px 8px 0;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            display: inline-block;
-        }
+/* Common Button Style */
+.filter-btn {
+  background: white;
+  border: 2px solid #e5e7eb;
+  color: #6b7280;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 12px 30px;
+  text-align: center;
+  flex: 0 0 auto; /* ✅ allows natural width (fit-content) on larger screens */
+}
 
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--gradient);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
-        }
+/* Hover & Active State */
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--gradient);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+/* ✅ Tablet & Mobile: 2 buttons per row, equal width */
+@media (max-width: 768px) {
+  .filter-btn {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+}
+
+/* ✅ Small Mobile: slightly smaller text and padding */
+@media (max-width: 480px) {
+  .filter-btn {
+    flex: 0 0 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+    font-size: 0.85rem;
+    padding: 8px 0;
+  }
+}
+
 
         /* Product Cards */
         .product-card {
@@ -367,12 +395,12 @@
             font-size: 0.8rem;
         }
 
-        /* Gallery Section */
         .gallery-section {
-            padding: 20px 0;
+            padding: 60px 0;
             background: white;
         }
 
+        /* Desktop Grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -436,6 +464,111 @@
             font-size: 0.9rem;
         }
 
+        /* Mobile Carousel */
+        .gallery-carousel {
+            display: none;
+            position: relative;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+            padding: 0 10px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 2rem 1.5rem;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .carousel-title {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .carousel-description {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.85rem;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #22c55e;
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .gallery-grid {
+                display: none;
+            }
+
+            .gallery-carousel {
+                display: block;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         /* CTA Section */
         .cta-section {
             padding: 80px 0;
@@ -783,7 +916,7 @@
                 <div class="col-lg-8 mx-auto fade-in">
                     <h2 class="cta-title">Ready to Go Solar?</h2>
                     <p class="cta-subtitle">Transform your agricultural operations with our innovative solar-powered solutions. Get expert consultation and customized quotes for your project.</p>
-                    <a href="#contact" class="btn-cta">
+                    <a href="./contact.html" class="btn-cta">
                         Get Free Quote
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>

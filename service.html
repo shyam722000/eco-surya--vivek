@@ -339,8 +339,8 @@
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background: var(--gradient);
             border-radius: 50%;
             display: flex;
@@ -358,6 +358,34 @@
             font-size: 2rem;
             color: white;
         }
+        @media (max-width: 992px) {
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Mobile (small screens: 576px and below) */
+@media (max-width: 576px) {
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .service-icon i {
+    font-size: 1.2rem; /* make icon smaller for balance */
+  }
+}
+
+/* Very small screens (extra small phones) */
+@media (max-width: 400px) {
+  .service-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
 
         .service-title {
             font-size: 1.5rem;
