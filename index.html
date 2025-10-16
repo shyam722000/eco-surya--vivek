@@ -14,10 +14,8 @@
     />
 
     <!-- Favicon -->
-    <link
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
-      rel="icon"
-    />
+   <link rel="icon" type="image/png" href="img/favicon.jpeg" />
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -92,7 +90,6 @@
           <a href="./about.html" class="nav-item nav-link">About</a>
           <a href="./service.html" class="nav-item nav-link">Services</a>
           <a href="./products.html" class="nav-item nav-link">Products</a>
-          <a href="./products.html" class="nav-item nav-link">Products</a>
           <a href="./contact.html" class="nav-item nav-link">Contact</a>
         </div>
         <a
@@ -100,8 +97,8 @@
           class="btn rounded-0 py-3 px-4 d-none d-lg-flex align-items-center gap-3"
           style="background-color: black; color: white"
         >
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
+          <!-- <i class="fab fa-facebook-f"></i> -->
+          <!-- <i class="fab fa-twitter"></i> -->
           <i class="fab fa-instagram"></i>
         </a>
       </div>
@@ -637,135 +634,146 @@
     <!-- Products Section End -->
 
     <!-- Footer Start -->
-    <footer class="bg-dark text-light py-5">
+    <footer
+      style="
+        background: url('img/footer.jpg') no-repeat center center/cover;
+        color: #ffffff;
+        padding: 2.5rem 0;
+      "
+    >
       <div class="container">
-        <div class="row py-4">
-          <div class="col-lg-4 mb-4">
-            <h4 class="mb-4" style="font-weight: 600; letter-spacing: 0.5px">
-              <i class="fas fa-solar-panel me-2" style="color: #ffc107"></i>
-              EcoSurya Energies
-            </h4>
+        <div class="row py-3 align-items-start justify-content-between">
+          <!-- Left Side: Logo + Tagline + Instagram Icon -->
+          <div class="col-lg-5 mb-3 d-flex flex-column justify-content-center">
+            <!-- Logo -->
+            <div class="mb-2">
+              <img
+                src="img/logo.png"
+                alt="EcoSurya Energies Logo"
+                style="height: 80px"
+              />
+            </div>
+
+            <!-- Tagline -->
             <p
-              class="text-muted mb-4"
-              style="line-height: 1.8; font-size: 0.95rem"
+              style="
+                font-size: 0.95rem;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.85);
+                margin-bottom: 1rem;
+              "
             >
-              Leading the renewable energy revolution with innovative solar
-              solutions for a sustainable future.
+              Green Energy for Every Drop.
             </p>
-            <div class="d-flex gap-3">
+
+            <!-- Instagram Icon -->
+            <div class="d-flex gap-2">
               <a
-                href="#"
-                class="text-light"
+                href="https://www.instagram.com/ecosurya_energies?igsh=MWhtNXdnMmJjcnJpaQ==&utm_source=ig_contact_invite"
+                target="_blank"
                 style="
-                  width: 40px;
-                  height: 40px;
-                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  width: 36px;
+                  height: 36px;
+                  border: 1px solid rgba(255, 255, 255, 0.4);
                   border-radius: 4px;
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   text-decoration: none;
+                  color: #ffffff;
                   transition: all 0.3s;
                 "
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                class="text-light"
-                style="
-                  width: 40px;
-                  height: 40px;
-                  border: 1px solid rgba(255, 255, 255, 0.2);
-                  border-radius: 4px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  transition: all 0.3s;
-                "
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="text-light"
-                style="
-                  width: 40px;
-                  height: 40px;
-                  border: 1px solid rgba(255, 255, 255, 0.2);
-                  border-radius: 4px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  transition: all 0.3s;
-                "
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="#"
-                class="text-light"
-                style="
-                  width: 40px;
-                  height: 40px;
-                  border: 1px solid rgba(255, 255, 255, 0.2);
-                  border-radius: 4px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  transition: all 0.3s;
-                "
+                onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'"
+                onmouseout="this.style.backgroundColor='transparent'"
               >
                 <i class="fab fa-instagram"></i>
               </a>
             </div>
           </div>
 
-          <div class="col-lg-3 mb-4">
-            <h5 class="mb-4" style="font-weight: 600; letter-spacing: 0.5px">
+          <!-- Right Side: Address + Contact Info -->
+          <div class="col-lg-4 mb-3 text-lg-start">
+            <h5
+              style="
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                margin-bottom: 1rem;
+                color: #ffffff;
+              "
+            >
               Contact Info
             </h5>
-            <div style="line-height: 2.2">
-              <p class="text-muted mb-3">
-                <i class="fas fa-map-marker-alt me-3" style="width: 20px"></i>
-                123 Green Energy Street,<br />
-                <span style="margin-left: 38px">Solar City</span>
+            <div style="line-height: 1.7">
+              <p
+                style="margin-bottom: 0.6rem; color: rgba(255, 255, 255, 0.85)"
+              >
+                <i
+                  class="fas fa-map-marker-alt me-2"
+                  style="width: 16px; color: #ffff"
+                ></i>
+                #144, "Sri" Nivasa, 2nd Cross, 1st Phase, Nisarga Layout,
+                Landmark: Royal Techno School, Abbigere, Chikkabanavara Post,
+                560090
               </p>
-              <p class="text-muted mb-3">
-                <i class="fas fa-phone me-3" style="width: 20px"></i>
-                +91 12345 67890
+              <p
+                style="margin-bottom: 0.6rem; color: rgba(255, 255, 255, 0.85)"
+              >
+                <i
+                  class="fas fa-phone me-2"
+                  style="width: 18px; color: #ffff"
+                ></i>
+                +91 89041 09205
               </p>
-              <p class="text-muted mb-3">
-                <i class="fas fa-envelope me-3" style="width: 20px"></i>
-                info@ecosurya.com
+              <p style="margin-bottom: 0; color: rgba(255, 255, 255, 0.85)">
+                <i
+                  class="fas fa-envelope me-2"
+                  style="width: 18px; color: #ffff"
+                ></i>
+                esesales10@gmail.com
               </p>
             </div>
           </div>
         </div>
-        <hr style="border-color: rgba(255, 255, 255, 0.1); margin: 2rem 0" />
+
+        <hr style="border-color: rgba(255, 255, 255, 0.15); margin: 1.5rem 0" />
+
         <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <p class="mb-0 text-muted" style="font-size: 0.9rem">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p
+              style="
+                margin: 0;
+                font-size: 0.85rem;
+                color: rgba(255, 255, 255, 0.7);
+              "
+            >
               &copy; 2024 EcoSurya Energies. All rights reserved.
             </p>
           </div>
-          <div class="col-md-6 text-center text-md-end">
-            <a
-              href="#"
-              class="text-muted text-decoration-none me-4"
-              style="font-size: 0.9rem; transition: all 0.3s"
-              >Privacy Policy</a
-            >
-            <a
-              href="#"
-              class="text-muted text-decoration-none"
-              style="font-size: 0.9rem; transition: all 0.3s"
-              >Terms of Service</a
-            >
-          </div>
+          <!-- <div class="col-md-6 text-center text-md-end">
+        <a
+          href="#"
+          style="
+            font-size: 0.85rem; 
+            color: rgba(255, 255, 255, 0.7); 
+            text-decoration: none; 
+            margin-right: 1rem; 
+            transition: color 0.3s;
+          "
+          onmouseover="this.style.color='#f4d03f'"
+          onmouseout="this.style.color='rgba(255,255,255,0.7)'"
+        >Privacy Policy</a>
+        <a
+          href="#"
+          style="
+            font-size: 0.85rem; 
+            color: rgba(255, 255, 255, 0.7); 
+            text-decoration: none; 
+            transition: color 0.3s;
+          "
+          onmouseover="this.style.color='#f4d03f'"
+          onmouseout="this.style.color='rgba(255,255,255,0.7)'"
+        >Terms of Service</a>
+      </div> -->
         </div>
       </div>
     </footer>
@@ -895,7 +903,11 @@
       style="width: 50px; height: 50px"
       onclick="toggleEnquiryPopup(event)"
     >
-  <img src="./img/call.png" alt="Enquiry Icon" style="width: 30px; height: 30px;" />
+      <img
+        src="./img/call.png"
+        alt="Enquiry Icon"
+        style="width: 30px; height: 30px"
+      />
     </a>
 
     <!-- Enquiry Popup -->
@@ -925,6 +937,19 @@
         <div>
           <strong>Enquiry Form</strong>
           <small>Fill out our contact form</small>
+          <a
+            href="https://forms.gle/WHPPmUKfx14o1x556"
+            target="_blank"
+            style="
+              color: #0549c8;
+              text-decoration: underline;
+              cursor: pointer;
+              display: inline-block;
+              margin-top: 4px;
+              font-size: 14px;
+            "
+            >click here
+          </a>
         </div>
       </div>
     </div>
