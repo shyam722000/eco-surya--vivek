@@ -4,7 +4,7 @@
 
 ## Organization Information
 
-**Company Name:** EcoSurya Energies
+**Company Name:** EcoSurya Energies LLP
 **Website:** https://www.ecosuryaenergies.com
 **Primary Location:** Bangalore, Karnataka, India
 **Email:** info@ecosurya.com
@@ -131,7 +131,6 @@ A: Yes, we provide complete installation, commissioning, and training for all pr
 ## Accessibility & Compliance
 
 - Website fully responsive (mobile, tablet, desktop)
-- WCAG 2.1 AA compliance standards
 - Fast loading times (<3 seconds)
 - Structured data markup (Schema.org JSON-LD)
 - Clear navigation and information architecture
