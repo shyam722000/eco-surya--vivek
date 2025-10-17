@@ -138,51 +138,51 @@
         font-weight: 600;
       }
 
-      /* Navbar */
-      .navbar {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-      }
+   .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            /* transition: all 0.3s ease; */
+        }
 
-      .navbar-brand {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-size: 1.8rem;
-        color: var(--primary) !important;
-        text-decoration: none;
-      }
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary) !important;
+            text-decoration: none;
+        }
 
-      .nav-link {
-        color: var(--dark) !important;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        position: relative;
-      }
+         .nav-link {
+            color: var(--dark) !important;
+            /* font-weight: 500; */
+            /* transition: all 0.3s ease; */
+            position: relative;
+        }
 
-      .nav-link:hover,
-      .nav-link.active {
-        color: var(--primary) !important;
-        transform: translateY(-2px);
-      }
+        .nav-link:hover {
+            color: var(--primary) !important;
+            transform: translateY(-2px);
+        }
 
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: var(--primary);
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-      }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            /* height: 2px; */
+            background: var(--primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
 
-      .nav-link:hover::after,
-      .nav-link.active::after {
-        width: 80%;
-      }
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
 
       /* Hero Section */
       .hero-section {
