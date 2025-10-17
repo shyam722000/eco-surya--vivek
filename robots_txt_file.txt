@@ -1,0 +1,50 @@
+# EcoSurya Energies robots.txt
+# Last updated: 2024
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /service.html
+Allow: /products.html
+Allow: /contact.html
+Allow: /reviews.html
+Allow: /img/
+Allow: /css/
+Allow: /js/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.pdf$
+Disallow: /*.docx$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?utm_
+Crawl-delay: 1
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Bing-specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# AI crawlers - allow for AI search indexing
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Sitemap
+Sitemap: https://www.ecosuryaenergies.com/sitemap.xml
+Sitemap: https://www.ecosuryaenergies.com/sitemap-products.xml
